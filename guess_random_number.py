@@ -10,20 +10,20 @@ from random import randint
 
 
 MIN = 0
-MAX = 100
-TRY = 2
+MAX = 1000
+TRY = 10
 RAND_NUM = randint(MIN, MAX)
-winner = True
-for _ in range(TRY + 1):
+
+while TRY > 0:
     number = int(input('Введи число от 0 до 1000: '))
     if number > RAND_NUM:
-        print('Ваше число БОЛЬШЕ загаданного')
-        winner = False
+        print(f'Ваше число БОЛЬШЕ загаданного, осталось {TRY-1} попыток')
+        TRY -= 1
     elif number < RAND_NUM:
-        print('Ваше число МЕНЬШЕ загаданного')
-        winner = False
+        print(f'Ваше число МЕНЬШЕ загаданного, осталось {TRY-1} попыток')
+        TRY -= 1
     else:
         print('УРАААА Вы выиграли!')
-        winner = True
-if not winner:
+        break
+else:
     print('Вы проиграли :(')

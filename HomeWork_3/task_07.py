@@ -21,4 +21,3 @@ for i in list_res:
 print(charCount)
 print(dict_res)
 
-

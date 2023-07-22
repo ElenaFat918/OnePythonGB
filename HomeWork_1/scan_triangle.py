@@ -7,6 +7,7 @@
 
 
 a, b, c = int(input("Введите a: ")), int(input("Введите b: ")), int(input("Введите c: "))
+
 if a + b > c and b + c > a and a + c > b:
     print('Треугольник существует')
     if a == b == c:

@@ -18,7 +18,7 @@ FileInfo = namedtuple('FileInfo', "name extension is_dir parent")
 logging.basicConfig(filename='info.log', level=logging.INFO, format='%(message)s')
 
 
-def collect_directory_info(dir_path):
+def make_directory_info(dir_path):
     # Проверяем, существует ли указанная директория
     if not os.path.exists(dir_path):
         raise ValueError(f'Directory does not exist: {dir_path}')
@@ -44,6 +44,6 @@ if __name__ == '__main__':
     directory_path = r'C:\Users\Райан\PycharmProjects\OnePythonGB'
 
     try:
-        collect_directory_info(directory_path)
+        make_directory_info(directory_path)
     except ValueError as e:
         print(e)
